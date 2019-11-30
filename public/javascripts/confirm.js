@@ -6,4 +6,8 @@ $(function () {
       $(this).addClass("selected");
     }
   });
+
+  $("#back-btn").click(function () {
+    $(location).attr("href", "scan")
+  });
 });
