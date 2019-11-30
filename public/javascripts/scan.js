@@ -12,4 +12,8 @@ $(function () {
         $(location).attr("href", "confirm")
       }, 500);
   });
+
+  $("#back-btn").click(function () {
+    $(location).attr("href", "post")
+  });
 });

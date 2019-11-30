@@ -7,7 +7,7 @@ block content
     .row.align-middle
       .col
         h5 Posted Items
-      .col.text-right
+      .col.text-right(id="add-new-btn")
         h5 Add New
 
 
@@ -31,19 +31,20 @@ block content
           .col.p-0.item-meta-text Electronic
           .col.p-0.text-right.item-meta-text Dec, 1, 2019
         .row.px-1 Description: An used Sony MDR-1000x headset with active noise cancelling.
-
   .container-fluid.fixed-bottom.bottom-nav
     .row
-      .col
+      .col(id="home-btn")
         .row.justify-content-center
           i.material-icons home
         .row.justify-content-center Home
-      .col
+      .col(id="post-btn")
         .row.justify-content-center
           i.material-icons add
         .row.justify-content-center Post
-      .col
+      .col(id="account-btn")
         .row.justify-content-center
           i.material-icons face
         .row.justify-content-center Account
 
+  script
+    include ../public/javascripts/post.js

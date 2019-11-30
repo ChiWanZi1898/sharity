@@ -3,11 +3,11 @@ extends layout
 block content
   .container-fluid.sticky-top.top-nav
     .row.align-middle
-      .col-4
+      .col-4(id="back-btn")
         h5 < Back
       .col-4.text-center
         h5 Detected
-      .col-4.text-right
+      .col-4.text-right(id="confirm-btn")
         h5 Confirm
 
   .container-fluid.item-list
