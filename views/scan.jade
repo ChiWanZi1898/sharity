@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  .container-fluid.fixed-top.top-nav
+    .row.align-middle
+      .col-4
+        h5 < Back
+      .col-4.text-center
+        h5 Scan
+
+  .container-fluid.p-0
+    img.scan-pic(src="images/scan.jpg")
+
+  .container-fluid.loading-mask(hidden)
+    .spinner-border
+
+  i.material-icons(id="camera-icon") camera
+
+  script
+    include ../public/javascripts/scan.js
