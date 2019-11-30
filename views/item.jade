@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  .container-fluid.sticky-top.top-nav
+    .row.align-middle
+      .col-4(id="back-btn")
+        h5 < Back
+      .col-4.text-center
+        h5 Item
+
+  .container-fluid.py-2
+    .row.justify-content-center.single-item-pic
+      img(src=`${ data.img }`, width='100px')
+    .row.single-item-desc-row
+      .col-4.text-right
+        p.single-item-desc-row-label Name:
+      .col.pl-0 #{data.name}
+    .row.single-item-desc-row
+      .col-4.text-right
+        p.single-item-desc-row-label Post Date:
+      .col.pl-0 #{data.date}
+    .row.single-item-desc-row
+      .col-4.text-right
+        p.single-item-desc-row-label Description:
+      .col.pl-0 #{data.description}
+    .row
+      .col
+        button.btn.single-item-request-btn.btn-block Request
+  script
+    include ../public/javascripts/item.js

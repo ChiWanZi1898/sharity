@@ -97,3 +97,36 @@ a {
   left: 50%;
   margin-left: -18px;
 }
+
+.single-item-pic {
+  padding: 20px 0 20px 0;
+  background-color: #b0eeff;
+}
+
+.single-item-desc-row {
+  background-color: #fafafa;
+  color: #00cdff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+}
+
+.single-item-desc-row-label {
+  background-color: #00cdff;
+  color: #fafafa;
+}
+
+.single-item-request-btn {
+  background-color: #00cdff;
+  color: #fafafa;
+}
+
+.single-item-request-btn:active {
+  background-color: #fafafa;
+  color: #00cdff;
+}
+
+.single-item-request-btn:Visited {
+  background-color: #b0eeff;
+  color: #fafafa;
+}
