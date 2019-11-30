@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  .container-fluid.brand
+    h3 Sharity
+  .container-fluid.sticky-top.top-nav
+    .row.align-middle
+      .col
+        h5 Posted Items
+      .col.text-right
+        h5 Add New
+
+
+
+  .container-fluid.item-list
+    .row.item
+      .col-4
+        img.item-pic(src="images/item1.jpg")
+      .col-8
+        .row.px-1.mb-2 iPad Pro
+        .row.px-1
+          .col.p-0.item-meta-text Electronic
+          .col.p-0.text-right.item-meta-text Dec, 1, 2019
+        .row.px-1 Description: An used iPad pro 2017
+    .row.item
+      .col-4
+        img.item-pic(src="images/item2.jpg")
+      .col-8
+        .row.px-1.mb-2 Headset
+        .row.px-1
+          .col.p-0.item-meta-text Electronic
+          .col.p-0.text-right.item-meta-text Dec, 1, 2019
+        .row.px-1 Description: An used Sony MDR-1000x headset with active noise cancelling.
+
+  .container-fluid.fixed-bottom.bottom-nav
+    .row
+      .col
+        .row.justify-content-center
+          i.material-icons home
+        .row.justify-content-center Home
+      .col
+        .row.justify-content-center
+          i.material-icons add
+        .row.justify-content-center Post
+      .col
+        .row.justify-content-center
+          i.material-icons face
+        .row.justify-content-center Account
+
