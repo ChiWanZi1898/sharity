@@ -4,6 +4,11 @@ $(function () {
     });
 
     $("#save-btn").click(function () {
-        $(location).attr("href", `/edit/save/${data.id}`);
+        var editedName = $("#name").val();
+        var editedType =$("#type").val();
+        var editedDescription = $("#desc").val();
+
+        $(location).attr("href", `/edit/save/${data.id}?name=${editedName}&type=${editedType}&desc=${editedDescription}`);
+
     });
 });

@@ -12,9 +12,18 @@ router.get('/:itemID', function(req, res, next) {
 
 router.get('/save/:itemID', function(req, res,next){
     var { itemID } = req.params;
-    console.log("id given"+itemID )
+
+    var newName = req.query.name;
+    var newType = req.query.type;
+    var newDesc = req.query.desc;
+
+
+
     var index = itemID-1
-    db.data2[index].name ="New Name";
+    db.data2[index].name = newName;
+    db.data2[index].type = newType;
+    db.data2[index].description = newDesc;
+
     res.render('confirm', {data: db.data2})
 });
 
