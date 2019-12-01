@@ -106,9 +106,9 @@ a {
 .single-item-desc-row {
   background-color: #fafafa;
   color: #00cdff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  margin-top: 10px;
+  padding-top: 6px;
+  padding-bottom: 1px;
+  margin-top: 6px;
 }
 
 .single-item-desc-row-label {
