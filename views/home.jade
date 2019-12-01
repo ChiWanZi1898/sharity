@@ -3,6 +3,7 @@ extends layout
 block content
   .container-fluid.brand
     h3 Sharity
+    p Welcome #{currentUser}
   .container-fluid.sticky-top.top-nav
     h5 Home
 
@@ -25,6 +26,7 @@ block content
 
   script(type='text/javascript').
     const data = !{JSON.stringify(data)}
+    const currentUser = !{currentUser}
 
   script
     include ../public/javascripts/common.js
