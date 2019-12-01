@@ -48,7 +48,7 @@ $(function () {
   });
 
   $("#confirm-btn").click(function () {
-    $(location).attr("href", "/home")
+    $(location).attr("href", "/post")
   });
 });
 

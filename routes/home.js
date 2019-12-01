@@ -4,7 +4,7 @@ var { db } = require('../db');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('home', {data: db.data});
+  res.render('home', {data: db.data.filter(x => x.from !== 'Ion')});
 });
 
 module.exports = router;
