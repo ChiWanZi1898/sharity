@@ -148,6 +148,7 @@ class DB {
     ];
     this.data2=[
       {
+        id: "1",
         img: "/images/bag.jpg",
         name: "School Bag",
         type: "Bag",
@@ -155,6 +156,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
+        id: "2",
         img: "/images/bag2.jpg",
         name: "Hand Bag",
         type: "Bag",
@@ -162,6 +164,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
+        id: "3",
         img: "/images/pen.jpg",
         name: "Pen",
         type: "Stationary",
@@ -169,6 +172,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
+        id: "4",
         img: "/images/drone.jpg",
         name: "DJI Drone",
         type: "Electronic",

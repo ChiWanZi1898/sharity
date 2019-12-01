@@ -9,6 +9,7 @@ var postRouter = require('./routes/post');
 var scanRouter = require('./routes/scan');
 var confirmRouter = require('./routes/confirm');
 var itemRouter = require('./routes/item');
+var editRouter = require('./routes/edit');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use('/post', postRouter);
 app.use('/scan', scanRouter);
 app.use('/confirm', confirmRouter);
 app.use('/item', itemRouter);
+app.use('/edit', editRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

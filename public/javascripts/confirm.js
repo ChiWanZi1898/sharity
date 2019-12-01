@@ -59,5 +59,5 @@ function editWindow(i){
   console.log("Here with "+ i)
   console.log("and Data "+ data[i].name)
 
-
+  $(location).attr("href", `/edit/${i}?redirect=edit`);
 }
