@@ -19,7 +19,7 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Ion",
-        requested_by: "none",
+        requested_by: "Jane",
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {

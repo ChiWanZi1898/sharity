@@ -29,7 +29,7 @@ block content
 
   script(type='text/javascript').
     const data = !{JSON.stringify(data)}
-    const currentUser = !{currentUser}
+    const currentUser = !{JSON.stringify(currentUser)}
 
   script
     include ../public/javascripts/common.js

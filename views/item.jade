@@ -27,11 +27,20 @@ block content
       .col-4.text-right
         p.single-item-desc-row-label Description:
       .col.pl-0 #{data.description}
-    .row.mt-4
-      .col
-        button.btn.single-item-request-btn.btn-block Request
+    #data
+      if data.requested_by === "none" && data.from !== currentUser
+        .row.mt-4
+          .col
+            button.btn.single-item-request-btn.btn-block Request
+      else
+        .row.single-item-desc-row
+          .col-4.text-right
+            p.single-item-desc-row-label Requested by:
+          .col.pl-0 #{data.requested_by}
+    
 
   script(type='text/javascript').
     const redirect = !{'"' + `${redirect}` + '"'}
+    const currentUser = !{JSON.stringify(currentUser)}
   script
     include ../public/javascripts/item.js
