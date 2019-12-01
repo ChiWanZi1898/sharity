@@ -1,47 +1,18 @@
+
+
 $(function () {
 
-  const data = [
-    {
-      img: "/images/bag.jpg",
-      name: "School Bag",
-      type: "Bag",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/bag2.jpg",
-      name: "Hand Bag",
-      type: "Bag",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/pen.jpg",
-      name: "Pen",
-      type: "Stationary",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/drone.jpg",
-      name: "DJI Drone",
-      type: "Electronic",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    }
-  ];
-
   for (let i in data) {
-    $(".item-list").append(listItem(data[i]))
+    $(".item-list").append(listItem(data[i],i))
   }
 
-  $(".item").click(function () {
+  /*$(".item").click(function () {
     if ($(this).hasClass("selected")) {
       $(this).removeClass("selected");
     } else {
       $(this).addClass("selected");
     }
-  });
+  });*/
 
   $("#back-btn").click(function () {
     $(location).attr("href", "/scan")
@@ -52,7 +23,7 @@ $(function () {
   });
 });
 
-function listItem(data) {
+function listItem(data, i) {
   return `
   <div class="row item">
     <div class="col-4">
@@ -64,7 +35,7 @@ function listItem(data) {
           ${data.name}
         </div>
         <div class="col-4 p-0 text-right">
-          <span class="single-item-desc-row-label px-1">edit</span>
+          <input type="button" onclick="editWindow(${i})" value="edit">
         </div>
       </div>
       <div class="row px-1">
@@ -81,4 +52,12 @@ function listItem(data) {
     </div>
   </div>
   `
+}
+
+function editWindow(i){
+
+  console.log("Here with "+ i)
+  console.log("and Data "+ data[i].name)
+
+
 }

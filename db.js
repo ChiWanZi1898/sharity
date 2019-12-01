@@ -146,6 +146,36 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
+    this.data2=[
+      {
+        img: "/images/bag.jpg",
+        name: "School Bag",
+        type: "Bag",
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        img: "/images/bag2.jpg",
+        name: "Hand Bag",
+        type: "Bag",
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        img: "/images/pen.jpg",
+        name: "Pen",
+        type: "Stationary",
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        img: "/images/drone.jpg",
+        name: "DJI Drone",
+        type: "Electronic",
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      }
+    ];
   }
 }
 
