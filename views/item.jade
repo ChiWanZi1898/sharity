@@ -31,13 +31,13 @@ block content
       if data.requested_by === "none" && data.from !== currentUser
         .row.mt-4
           .col
-            button.btn.single-item-request-btn.btn-block Request
+            button.btn.single-item-request-btn.btn-block(disabled id="request-btn" itemid=`${data.id}`) Request
       else
         .row.single-item-desc-row
           .col-4.text-right
             p.single-item-desc-row-label Requested by:
           .col.pl-0 #{data.requested_by}
-    
+
 
   script(type='text/javascript').
     const redirect = !{'"' + `${redirect}` + '"'}
