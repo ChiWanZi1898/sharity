@@ -1,42 +1,42 @@
 $(function () {
   for (let i in data) {
-    $(".item-list").append(listItem(data[i],i));
+    $(".item-list").append(listItem(data[i], i));
     $(`#${i}`).hide();
   }
 
   $(".item").click(function () {
-  const itemSelected = {};
-  $(".item").click(function () {
-    const id = $(this).attr('itemid');
-    if ($(this).hasClass("selected")) {
-      $(this).removeClass("selected");
-      delete itemSelected[id];
-      console.log(itemSelected);
-    } else {
-      $(this).addClass("selected");
-      itemSelected[id] = data[id];
-      console.log(itemSelected);
-    }
-  });
-
-  $("#back-btn").click(function () {
-    $(location).attr("href", "/scan")
-  });
-
-  $("#confirm-btn").click(function () {
-    $.ajax({
-      method: "POST",
-      url: "/confirm/addNew",
-      data: {
-        text: JSON.stringify(Object.keys(itemSelected))
+    const itemSelected = {};
+    $(".item").click(function () {
+      const id = $(this).attr('itemid');
+      if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        delete itemSelected[id];
+        console.log(itemSelected);
+      } else {
+        $(this).addClass("selected");
+        itemSelected[id] = data[id];
+        console.log(itemSelected);
       }
     });
-    $(location).attr("href", "/post")
-  });
-});
 
-function listItem(data, i) {
-  return `
+    $("#back-btn").click(function () {
+      $(location).attr("href", "/scan")
+    });
+
+    $("#confirm-btn").click(function () {
+      $.ajax({
+        method: "POST",
+        url: "/confirm/addNew",
+        data: {
+          text: JSON.stringify(Object.keys(itemSelected))
+        }
+      });
+      $(location).attr("href", "/post")
+    });
+  });
+
+  function listItem(data, i) {
+    return `
   <div class="row item" itemid=${i}>
     <div class="col-4">
       <img src="${data.img}" class="item-pic">
@@ -63,13 +63,12 @@ function listItem(data, i) {
       </div>
     </div>
   </div>
-<!--  </label>-->
-<!--  <input id=${i} type="checkbox" onclick="addNew(${i})" name="" value=""/>-->
   `
-}
+  }
+});
 
-function editWindow(i) {
+  function editWindow(i) {
 
+    $(location).attr("href", `/edit/${i}?redirect=confirm`);
+  }
 
-  $(location).attr("href", `/edit/${i}?redirect=confirm`);
-}
