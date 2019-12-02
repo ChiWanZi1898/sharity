@@ -1,45 +1,18 @@
 $(function () {
-
-  const data = [
-    {
-      img: "/images/bag.jpg",
-      name: "School Bag",
-      type: "Bag",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/bag2.jpg",
-      name: "Hand Bag",
-      type: "Bag",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/pen.jpg",
-      name: "Pen",
-      type: "Stationary",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    },
-    {
-      img: "/images/drone.jpg",
-      name: "DJI Drone",
-      type: "Electronic",
-      post_date: "Dec 1, 2019",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
-    }
-  ];
-
   for (let i in data) {
-    $(".item-list").append(listItem(data[i]))
+    $(".item-list").append(listItem(data[i]));
   }
 
-  $(".item").click(function () {
-    if ($(this).hasClass("selected")) {
-      $(this).removeClass("selected");
+  let itemSelected = {};
+  $(".select-btn").click(function () {
+    const id = $(this).attr('itemid');
+    const itemDom = $(`#item-${id}`);
+    if (itemDom.hasClass("selected")) {
+      itemDom.removeClass("selected");
+      delete itemSelected[id];
     } else {
-      $(this).addClass("selected");
+      itemDom.addClass("selected");
+      itemSelected[id] = data[id];
     }
   });
 
@@ -48,23 +21,37 @@ $(function () {
   });
 
   $("#confirm-btn").click(function () {
+    $.ajax({
+      method: "POST",
+      url: "/confirm/addNew",
+      data: {
+        text: JSON.stringify(Object.keys(itemSelected))
+      }
+    });
     $(location).attr("href", "/post")
   });
-});
 
-function listItem(data) {
-  return `
-  <div class="row item">
+  $(".edit-btn").click(function () {
+    console.log(`/edit/${$(this).attr('itemid')}?redirect=confirm`);
+    $(location).attr("href", `/edit/${$(this).attr('itemid')}?redirect=confirm`);
+  });
+
+  function listItem(data, i) {
+    return `
+  <div class="row item" id="item-${data.id}">
     <div class="col-4">
       <img src="${data.img}" class="item-pic">
     </div>
     <div class="col-8">
       <div class="row px-1 mb-2">
-        <div class="col-8 p-0">
+        <div class="col-6 p-0">
           ${data.name}
         </div>
-        <div class="col-4 p-0 text-right">
-          <span class="single-item-desc-row-label px-1">edit</span>
+        <div class="col-3 p-0 text-right">
+          <span class="single-item-desc-row-label px-1 select-btn" itemid=${data.id}>select</span>
+        </div>
+        <div class="col-3 p-0 text-right">
+          <span class="single-item-desc-row-label px-1 edit-btn" itemid=${data.id}>edit</span>
         </div>
       </div>
       <div class="row px-1">
@@ -81,4 +68,6 @@ function listItem(data) {
     </div>
   </div>
   `
-}
+  }
+});
+

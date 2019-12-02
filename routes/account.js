@@ -1,11 +1,9 @@
 var express = require('express');
+const {db} = require('../db');
 var router = express.Router();
-var {db} = require('../db');
-
 
 router.get('/', function (req, res, next) {
-  db.temp = JSON.parse(JSON.stringify(db.dataScan));
-  res.render('scan');
+  res.render('account', {users: db.users.filter(x => x.name == db.currentUser)[0]});
 });
 
 module.exports = router;
