@@ -1,0 +1,70 @@
+extends layout
+
+block content
+  h1 STYLE GUID
+
+  h2 1. TEXT
+  h1 Heading 1
+  h2 Heading 2
+  h3 Heading 3
+  h4 Heading 4
+  h5 Heading 5
+  h6 Heading 6
+
+
+  h2 2. COMPONENTS
+  h4 2.1. BRAND
+  .container-fluid.brand
+    h3 Sharity
+
+  h4 2.2. NAVIGATION BAR
+  .container-fluid.top-nav
+    .row.align-middle
+      .col
+        h5 Button
+      .col.text-center
+        h5 Title
+      .col.text-right
+        h5 Button
+
+  h4 2.3. BOTTOM NAVIGATION BAR
+  .container-fluid.bottom-nav
+    .row
+      .col
+        .row.justify-content-center
+          i.material-icons home
+        .row.justify-content-center Home
+      .col
+        .row.justify-content-center
+          i.material-icons add
+        .row.justify-content-center Post
+      .col
+        .row.justify-content-center
+          i.material-icons face
+        .row.justify-content-center Account
+
+  h4 2.4. LIST
+  .container-fluid.item-list.pb-0
+
+  h5 2.5. INLINE BUTTON
+  <span class="single-item-desc-row-label px-1 edit-btn">inline button</span>
+
+  h5 2.6. BUTTON
+  button.btn.single-item-request-btn.btn-block button
+
+  h2 3. MISC
+  h4 3.1. SPINNER
+  .container-fluid
+    .spinner-border
+  h4 3.2. ICON
+    h5 3.2.1 HOME PAGE ICON
+    i.material-icons home
+    h5 3.2.2 POST PAGE ICON
+    i.material-icons add
+    h5 3.2.3 ACCOUNT PAGE ICON
+    i.material-icons face
+    h5 3.2.2 TAKE PIC ICON
+    i.material-icons camera
+
+  script
+    include ../public/javascripts/design.js

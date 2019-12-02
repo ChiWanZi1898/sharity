@@ -11,6 +11,7 @@ var confirmRouter = require('./routes/confirm');
 var itemRouter = require('./routes/item');
 var accountRouter = require('./routes/account');
 var editRouter = require('./routes/edit');
+var designRouter = require('./routes/design');
 
 var app = express();
 
@@ -32,6 +33,8 @@ app.use('/confirm', confirmRouter);
 app.use('/item', itemRouter);
 app.use('/account', accountRouter);
 app.use('/edit', editRouter);
+app.use('/design', designRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
