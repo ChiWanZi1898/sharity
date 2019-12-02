@@ -1,5 +1,38 @@
 class DB {
   constructor() {
+    this.currentUser = "Ion";
+    this.users = [
+    {
+      name: "Ion",
+      email: "iondonor@email.com",
+      description: "Loves to donate items to help the needy.",
+      occupation: "Chemist"
+    },
+    {
+      name: "Jack",
+      email: "jacklovestoshare@email.com",
+      description: "Loves to donate items to help the needy.",
+      occupation: "Banker"
+    },
+    {
+      name: "Farah",
+      email: "contactfarah@email.com",
+      description: "Loves to donate items to help the needy.",
+      occupation: "Teacher"
+    },
+    {
+      name: "Anna",
+      email: "anna_xyz90@email.com",
+      description: "Loves to donate items to help the needy.",
+      occupation: "Electrician"
+    },
+    {
+      name: "Kimberley",
+      email: "kim_2345@email.com",
+      description: "Loves to donate items to help the needy.",
+      occupation: "Dancer"
+    }
+  ];
     this.data = [
       {
         id: "1",
@@ -8,7 +41,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
         id: "2",
@@ -17,7 +51,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Ion",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
         id: "3",
@@ -26,7 +61,8 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Ion",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
         id: "4",
@@ -35,7 +71,8 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
         id: "5",
@@ -44,7 +81,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
         id: "6",
@@ -53,7 +91,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Lily",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
         id: "7",
@@ -62,7 +101,8 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Jake",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
         id: "8",
@@ -71,7 +111,8 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
         id: "9",
@@ -80,7 +121,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
         id: "10",
@@ -89,7 +131,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Jake",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
         id: "11",
@@ -98,7 +141,8 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Jake",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
         id: "12",
@@ -107,7 +151,8 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
         id: "13",
@@ -116,7 +161,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
         id: "14",
@@ -125,7 +171,8 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Jake",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
         id: "15",
@@ -134,7 +181,8 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
         id: "16",
@@ -143,7 +191,8 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        requested_by: "none",
+        description: "A hoodie is a sweatshirt or a jacket with a hood."
       }
     ];
   }

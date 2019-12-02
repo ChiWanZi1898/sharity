@@ -20,6 +20,6 @@ $(function () {
   });
 
   $("#account-btn").click(function () {
-    $(location).attr("href", "/#")
+    $(location).attr("href", "/account")
   });
 });

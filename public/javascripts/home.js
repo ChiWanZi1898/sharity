@@ -7,6 +7,10 @@ $(function () {
     $(location).attr("href", `/item/${$(this).attr("id")}?redirect=home`);
   });
 
+  $("#add-new-btn").click(function () {
+    $(location).attr("href", "/scan")
+  });
+  
   $("#home-btn").click(function () {
     $(location).attr("href", "/home")
   });
@@ -16,6 +20,6 @@ $(function () {
   });
 
   $("#account-btn").click(function () {
-    $(location).attr("href", "/#")
+    $(location).attr("href", "/account")
   });
 });
