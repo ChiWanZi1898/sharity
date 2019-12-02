@@ -146,7 +146,46 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
+    this.dataScan = [
+      {
+        id: "20",
+        img: "/images/bag.jpg",
+        name: "School Bag",
+        type: "Bag",
+        from: 'Ion',
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        id: "21",
+        img: "/images/bag2.jpg",
+        name: "Hand Bag",
+        type: "Bag",
+        from: 'Ion',
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        id: "22",
+        img: "/images/pen.jpg",
+        name: "Pen",
+        type: "Stationary",
+        from: 'Ion',
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      },
+      {
+        id: "23",
+        img: "/images/drone.jpg",
+        name: "DJI Drone",
+        type: "Electronic",
+        from: 'Ion',
+        post_date: "Dec 1, 2019",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+      }
+    ];
+    this.temp = [];
   }
 }
 
-module.exports.db =  new DB();
+module.exports.db = new DB();
