@@ -10,16 +10,12 @@ router.get('/:itemID', function (req, res, next) {
 });
 
 
-router.post('/save/:itemID', function (req, res, next) {
-  var {itemID} = req.params;
-
-
-  var data = JSON.stringify(req.body)
-  console.log("data" + data)
+router.post('/', function (req, res, next) {
+  let data = req.body;
+  var itemID = data.itemId;
   var newName = data.name;
   var newType = data.type;
   var newDesc = data.desc;
-
 
   var index = itemID - 1
   db.data2[index].name = newName;

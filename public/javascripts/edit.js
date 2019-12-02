@@ -9,17 +9,17 @@ $(function () {
     var editedDescription = $("#desc").val();
 
     // $(location).attr("href", `/edit/save/${data.id}?name=${editedName}&type=${editedType}&desc=${editedDescription}`);
-
       $.ajax({
           method: "POST",
-          url: "/edit/save/${data.id}?",
+          url: "/edit",
           data: {
+              itemId: data.id,
               name: editedName,
               type: editedType,
               desc: editedDescription,
           }
       });
-
+    $(location).attr("href", "/confirm")
   });
 
 });
