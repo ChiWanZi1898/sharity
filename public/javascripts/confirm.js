@@ -44,13 +44,13 @@ $(function () {
     </div>
     <div class="col-8">
       <div class="row px-1 mb-2">
-        <div class="col-8 p-0">
+        <div class="col-6 p-0">
           ${data.name}
         </div>
-        <div class="col-2 p-0 text-right">
+        <div class="col-3 p-0 text-right">
           <span class="single-item-desc-row-label px-1 select-btn" itemid=${data.id}>select</span>
         </div>
-        <div class="col-2 p-0 text-right">
+        <div class="col-3 p-0 text-right">
           <span class="single-item-desc-row-label px-1 edit-btn" itemid=${data.id}>edit</span>
         </div>
       </div>
