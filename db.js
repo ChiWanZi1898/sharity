@@ -146,7 +146,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
-    this.data2=[
+    this.data2 = [
       {
         id: "1",
         img: "/images/bag.jpg",
@@ -183,4 +183,4 @@ class DB {
   }
 }
 
-module.exports.db =  new DB();
+module.exports.db = new DB();

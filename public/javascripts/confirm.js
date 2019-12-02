@@ -1,18 +1,16 @@
-
-
 $(function () {
 
   for (let i in data) {
-    $(".item-list").append(listItem(data[i],i))
+    $(".item-list").append(listItem(data[i], i))
   }
 
-  /*$(".item").click(function () {
+  $(".item").click(function () {
     if ($(this).hasClass("selected")) {
       $(this).removeClass("selected");
     } else {
       $(this).addClass("selected");
     }
-  });*/
+  });
 
   $("#back-btn").click(function () {
     $(location).attr("href", "/scan")
@@ -54,7 +52,7 @@ function listItem(data, i) {
   `
 }
 
-function editWindow(i){
+function editWindow(i) {
 
 
   $(location).attr("href", `/edit/${i}?redirect=confirm`);
