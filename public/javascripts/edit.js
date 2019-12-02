@@ -4,22 +4,21 @@ $(function () {
   });
 
   $("#save-btn").click(function () {
-    var editedName = $("#name").val();
-    var editedType = $("#type").val();
-    var editedDescription = $("#desc").val();
+    const editedName = $("#name").val();
+    const editedType = $("#type").val();
+    const editedDescription = $("#desc").val();
 
-    // $(location).attr("href", `/edit/save/${data.id}?name=${editedName}&type=${editedType}&desc=${editedDescription}`);
-      $.ajax({
-          method: "POST",
-          url: "/edit",
-          data: {
-              itemId: data.id,
-              name: editedName,
-              type: editedType,
-              desc: editedDescription,
-          }
-      });
-    $(location).attr("href", "/confirm")
+    $.ajax({
+      method: "POST",
+      url: "/edit",
+      data: {
+        itemId: data.id,
+        name: editedName,
+        type: editedType,
+        desc: editedDescription,
+      }
+    });
+    $(location).attr("href", '/' + redirect)
   });
 
 });

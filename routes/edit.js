@@ -5,24 +5,28 @@ var router = express.Router();
 router.get('/:itemID', function (req, res, next) {
   const {itemID} = req.params;
   const {redirect} = req.query;
-
-  res.render('edit', {data: db.data2[itemID], redirect: redirect});
+  res.render('edit', {data: db.temp.find(x => x.id === itemID), redirect: redirect});
 });
 
 
 router.post('/', function (req, res, next) {
-  let data = req.body;
-  var itemID = data.itemId;
-  var newName = data.name;
-  var newType = data.type;
-  var newDesc = data.desc;
+  try {
+    let data = req.body;
+    const itemID = data.itemId;
+    const newName = data.name;
+    const newType = data.type;
+    const newDesc = data.desc;
 
-  var index = itemID - 1
-  db.data2[index].name = newName;
-  db.data2[index].type = newType;
-  db.data2[index].description = newDesc;
+    db.temp.find(x => x.id === itemID).name = newName;
+    db.temp.find(x => x.id === itemID).type = newType;
+    db.temp.find(x => x.id === itemID).description = newDesc;
 
-  res.render('confirm', {data: db.data2})
+    res.sendStatus(200)
+  } catch (e) {
+    console.log(e);
+    res.sendStatus(500)
+  }
+
 });
 
 module.exports = router;

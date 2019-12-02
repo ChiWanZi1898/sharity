@@ -1,43 +1,44 @@
 $(function () {
   for (let i in data) {
-    $(".item-list").append(listItem(data[i], i));
-    $(`#${i}`).hide();
+    $(".item-list").append(listItem(data[i]));
   }
 
-  $(".item").click(function () {
-    const itemSelected = {};
-    $(".item").click(function () {
-      const id = $(this).attr('itemid');
-      if ($(this).hasClass("selected")) {
-        $(this).removeClass("selected");
-        delete itemSelected[id];
-        console.log(itemSelected);
-      } else {
-        $(this).addClass("selected");
-        itemSelected[id] = data[id];
-        console.log(itemSelected);
+  let itemSelected = {};
+  $(".select-btn").click(function () {
+    const id = $(this).attr('itemid');
+    const itemDom = $(`#item-${id}`);
+    if (itemDom.hasClass("selected")) {
+      itemDom.removeClass("selected");
+      delete itemSelected[id];
+    } else {
+      itemDom.addClass("selected");
+      itemSelected[id] = data[id];
+    }
+  });
+
+  $("#back-btn").click(function () {
+    $(location).attr("href", "/scan")
+  });
+
+  $("#confirm-btn").click(function () {
+    $.ajax({
+      method: "POST",
+      url: "/confirm/addNew",
+      data: {
+        text: JSON.stringify(Object.keys(itemSelected))
       }
     });
+    $(location).attr("href", "/post")
+  });
 
-    $("#back-btn").click(function () {
-      $(location).attr("href", "/scan")
-    });
-
-    $("#confirm-btn").click(function () {
-      $.ajax({
-        method: "POST",
-        url: "/confirm/addNew",
-        data: {
-          text: JSON.stringify(Object.keys(itemSelected))
-        }
-      });
-      $(location).attr("href", "/post")
-    });
+  $(".edit-btn").click(function () {
+    console.log(`/edit/${$(this).attr('itemid')}?redirect=confirm`);
+    $(location).attr("href", `/edit/${$(this).attr('itemid')}?redirect=confirm`);
   });
 
   function listItem(data, i) {
     return `
-  <div class="row item" itemid=${i}>
+  <div class="row item" id="item-${data.id}">
     <div class="col-4">
       <img src="${data.img}" class="item-pic">
     </div>
@@ -46,8 +47,11 @@ $(function () {
         <div class="col-8 p-0">
           ${data.name}
         </div>
-        <div class="col-4 p-0 text-right">
-          <input type="button" onclick="editWindow(${i})" value="edit">
+        <div class="col-2 p-0 text-right">
+          <span class="single-item-desc-row-label px-1 select-btn" itemid=${data.id}>select</span>
+        </div>
+        <div class="col-2 p-0 text-right">
+          <span class="single-item-desc-row-label px-1 edit-btn" itemid=${data.id}>edit</span>
         </div>
       </div>
       <div class="row px-1">
@@ -66,9 +70,4 @@ $(function () {
   `
   }
 });
-
-  function editWindow(i) {
-
-    $(location).attr("href", `/edit/${i}?redirect=confirm`);
-  }
 

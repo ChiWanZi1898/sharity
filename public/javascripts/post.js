@@ -3,13 +3,6 @@ $(function () {
     $(".item-list").append(listItem(data[i]))
   }
 
-  for (let i in data1) {
-    if (data1[i].selected === "True") {
-      $(".item-list").append(listItem(data1[i]))
-    }
-  }
-
-
   $(".item").click(function () {
     $(location).attr("href", `/item/${$(this).attr("id")}?redirect=post`);
   });

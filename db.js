@@ -146,45 +146,45 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
-    this.data2 = [
+    this.dataScan = [
       {
-        id: "1",
+        id: "20",
         img: "/images/bag.jpg",
         name: "School Bag",
         type: "Bag",
-        selected: "False",
+        from: 'Ion',
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "2",
+        id: "21",
         img: "/images/bag2.jpg",
         name: "Hand Bag",
         type: "Bag",
-        selected: "False",
+        from: 'Ion',
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "3",
+        id: "22",
         img: "/images/pen.jpg",
         name: "Pen",
         type: "Stationary",
-        selected: "False",
+        from: 'Ion',
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "4",
+        id: "23",
         img: "/images/drone.jpg",
         name: "DJI Drone",
         type: "Electronic",
-        selected: "False",
+        from: 'Ion',
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
-    this.data3 = [];
+    this.temp = [];
   }
 }
 
