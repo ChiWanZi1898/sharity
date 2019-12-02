@@ -9,7 +9,9 @@ router.get('/', function (req, res, next) {
 router.post('/addNew', function (req, res, next) {
   let selected = JSON.parse(req.body.text);
   for (let i in selected) {
-    db.data.push(db.temp.find(x => x.id === selected[i]));
+    let item = JSON.parse(JSON.stringify(db.temp.find(x => x.id === selected[i])));
+    item.id = `${db.data.length + 1}`;
+    db.data.push(item);
   }
   res.redirect('/post');
 });
