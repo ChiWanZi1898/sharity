@@ -9,20 +9,20 @@ class DB {
       occupation: "Chemist"
     },
     {
-      name: "Jack",
-      email: "jacklovestoshare@email.com",
+      name: "Tom",
+      email: "tomlovestoshare@email.com",
       description: "Loves to donate items to help the needy.",
       occupation: "Banker"
     },
     {
-      name: "Farah",
-      email: "contactfarah@email.com",
+      name: "Jane",
+      email: "contactjane@email.com",
       description: "Loves to donate items to help the needy.",
       occupation: "Teacher"
     },
     {
-      name: "Anna",
-      email: "anna_xyz90@email.com",
+      name: "Lily",
+      email: "lily_xyz90@email.com",
       description: "Loves to donate items to help the needy.",
       occupation: "Electrician"
     },
@@ -100,7 +100,7 @@ class DB {
         name: "Blanket",
         type: "Housing",
         post_date: "Dec 1, 2019",
-        from: "Jake",
+        from: "Kimberley",
         requested_by: "none",
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
@@ -130,7 +130,7 @@ class DB {
         name: "Headset",
         type: "Electronic",
         post_date: "Dec 1, 2019",
-        from: "Jake",
+        from: "Kimberley",
         requested_by: "none",
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
@@ -140,7 +140,7 @@ class DB {
         name: "Blanket",
         type: "Housing",
         post_date: "Dec 1, 2019",
-        from: "Jake",
+        from: "Kimberley",
         requested_by: "none",
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
@@ -170,7 +170,7 @@ class DB {
         name: "Headset",
         type: "Electronic",
         post_date: "Dec 1, 2019",
-        from: "Jake",
+        from: "Kimberley",
         requested_by: "none",
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
