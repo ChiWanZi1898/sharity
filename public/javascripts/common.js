@@ -6,7 +6,7 @@ function listItem(data) {
     </div>
     <div class="col-8">
       <div class="row px-1 mb-2">
-        ${data.name}
+        <b>${data.name}</b>&nbsp;by ${data.from}
       </div>
       <div class="row px-1">
         <div class="col p-0 item-meta-text">

@@ -27,11 +27,35 @@ block content
       .col-4.text-right
         p.single-item-desc-row-label Description:
       .col.pl-0 #{data.description}
-    .row.mt-4
-      .col
-        button.btn.single-item-request-btn.btn-block Request
+    #data
+      if data.from !== currentUser
+        .row.mt-4
+          .col
+            if (!data.requested)
+              button.btn.single-item-request-btn.btn-block(id="request-btn" itemid=`${data.id}`) Request
+            else
+              button.btn.single-item-request-btn.btn-block(disabled id="request-btn" itemid=`${data.id}`) Request
+      else
+        .row.single-item-desc-row
+          .col-4.text-right
+            p.single-item-desc-row-label Requests:
+
+          if data.confirmed
+            .col.pl-0 Accepted request from #{data.requested_by[0]}.
+          else
+            .col
+              each req in data.requested_by
+                .row.my-1
+                  .col-2.p-0.pt-3 #{req}
+                  .col-5.p-1
+                    button.btn.single-item-request-btn.btn-block.accept-btn(nameid=`${req}` itemid=`${data.id}`) Accept
+                  .col-5.p-1
+                    button.btn.single-item-request-btn.btn-block.decline-btn(nameid=`${req}` itemid=`${data.id}`) Decline
+
+
 
   script(type='text/javascript').
     const redirect = !{'"' + `${redirect}` + '"'}
+    const currentUser = !{JSON.stringify(currentUser)}
   script
     include ../public/javascripts/item.js

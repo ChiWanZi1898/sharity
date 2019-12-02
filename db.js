@@ -1,6 +1,7 @@
 class DB {
   constructor() {
     this.currentUser = "Ion";
+    this.currentUser = "Ion";
     this.users = [
       {
         name: "Ion",
@@ -41,7 +42,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
@@ -51,7 +54,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Ion",
-        requested_by: "none",
+        requested: false,
+        requested_by: ["Tom", "Lily"],
+        confirmed: false,
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
@@ -61,7 +66,9 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Ion",
-        requested_by: "none",
+        requested: false,
+        requested_by: ["Tom"],
+        confirmed: false,
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
@@ -71,7 +78,9 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
@@ -81,7 +90,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
@@ -91,7 +102,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Lily",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
@@ -100,8 +113,10 @@ class DB {
         name: "Blanket",
         type: "Housing",
         post_date: "Dec 1, 2019",
-        from: "Kimberley",
-        requested_by: "none",
+        from: "Jake",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
@@ -111,7 +126,9 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
@@ -121,7 +138,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
@@ -130,8 +149,10 @@ class DB {
         name: "Headset",
         type: "Electronic",
         post_date: "Dec 1, 2019",
-        from: "Kimberley",
-        requested_by: "none",
+        from: "Jake",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
@@ -140,8 +161,10 @@ class DB {
         name: "Blanket",
         type: "Housing",
         post_date: "Dec 1, 2019",
-        from: "Kimberley",
-        requested_by: "none",
+        from: "Jake",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
@@ -151,7 +174,9 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A hoodie is a sweatshirt or a jacket with a hood."
       },
       {
@@ -161,7 +186,9 @@ class DB {
         type: "Electronic",
         post_date: "Dec 1, 2019",
         from: "Tom",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "iPad is a tablet for browsing the web, watching videos, listening to music, playing games, reading e-books and more."
       },
       {
@@ -170,8 +197,10 @@ class DB {
         name: "Headset",
         type: "Electronic",
         post_date: "Dec 1, 2019",
-        from: "Kimberley",
-        requested_by: "none",
+        from: "Jake",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A headset is a hardware device that connects to a telephone or computer that allow the user to talk and listen while keeping their hands free."
       },
       {
@@ -181,7 +210,9 @@ class DB {
         type: "Housing",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "Blanket is a large piece of woolen material used as a covering for warmth."
       },
       {
@@ -191,7 +222,9 @@ class DB {
         type: "Clothes",
         post_date: "Dec 1, 2019",
         from: "Jane",
-        requested_by: "none",
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         description: "A hoodie is a sweatshirt or a jacket with a hood."
       }
     ];
@@ -202,6 +235,9 @@ class DB {
         name: "School Bag",
         type: "Bag",
         from: 'Ion',
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
@@ -211,6 +247,9 @@ class DB {
         name: "Hand Bag",
         type: "Bag",
         from: 'Ion',
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
@@ -220,6 +259,9 @@ class DB {
         name: "Pen",
         type: "Stationary",
         from: 'Ion',
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
@@ -229,6 +271,9 @@ class DB {
         name: "DJI Drone",
         type: "Electronic",
         from: 'Ion',
+        requested: false,
+        requested_by: [],
+        confirmed: false,
         post_date: "Dec 1, 2019",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }

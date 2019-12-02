@@ -2,7 +2,7 @@ extends layout
 
 block content
   .container-fluid.brand
-    h3 Sharity
+    h3 Sharity by #{currentUser}
   .container-fluid.sticky-top.top-nav
     .row.align-middle
       .col
@@ -29,6 +29,7 @@ block content
 
   script(type='text/javascript').
     const data = !{JSON.stringify(data)}
+    const currentUser = !{JSON.stringify(currentUser)}
 
   script
     include ../public/javascripts/common.js
