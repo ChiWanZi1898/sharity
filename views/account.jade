@@ -8,7 +8,7 @@ block content
 
   .container-fluid.py-2
     .row.justify-content-center.single-item-pic
-      img(src='../public/images/user.jpg', width='200px')
+      img(src='/images/user.jpg', width='200px')
     .row.single-item-desc-row
       .col-4.text-left
         p.single-item-desc-row-label Name:
@@ -20,11 +20,11 @@ block content
     .row.single-item-desc-row
       .col-4.text-left
         p.single-item-desc-row-label Email:
-      .col.pl-0 #{users.email}  
+      .col.pl-0 #{users.email}
     .row.single-item-desc-row
       .col-4.text-left
         p.single-item-desc-row-label Description:
-      .col.pl-0 #{users.description}  
+      .col.pl-0 #{users.description}
 
   .container-fluid.fixed-bottom.bottom-nav
     .row
