@@ -146,9 +146,9 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       }
     ];
-    this.data2=[
+    this.data2 = [
       {
-        id: "0",
+        id: "1",
         img: "/images/bag.jpg",
         name: "School Bag",
         type: "Bag",
@@ -157,7 +157,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "1",
+        id: "2",
         img: "/images/bag2.jpg",
         name: "Hand Bag",
         type: "Bag",
@@ -166,7 +166,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "2",
+        id: "3",
         img: "/images/pen.jpg",
         name: "Pen",
         type: "Stationary",
@@ -175,7 +175,7 @@ class DB {
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
       },
       {
-        id: "3",
+        id: "4",
         img: "/images/drone.jpg",
         name: "DJI Drone",
         type: "Electronic",
@@ -188,4 +188,4 @@ class DB {
   }
 }
 
-module.exports.db =  new DB();
+module.exports.db = new DB();

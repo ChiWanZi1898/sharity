@@ -1,11 +1,10 @@
-
-
 $(function () {
   for (let i in data) {
     $(".item-list").append(listItem(data[i],i));
     $(`#${i}`).hide();
   }
 
+  $(".item").click(function () {
   const itemSelected = {};
   $(".item").click(function () {
     const id = $(this).attr('itemid');
@@ -69,11 +68,8 @@ function listItem(data, i) {
   `
 }
 
-function editWindow(i){
-
-  console.log("Here with "+ i)
-  console.log("and Data "+ data[i].name)
+function editWindow(i) {
 
 
+  $(location).attr("href", `/edit/${i}?redirect=confirm`);
 }
-

@@ -1,171 +1,132 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #fafafa;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #fafafa;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
 .bottom-nav {
-  background-color: #50e4ff;
-  color: #fafafa;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background-color: #50e4ff;
+    color: #fafafa;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .brand {
-  background-color: #50e4ff;
-  color: #fafafa;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background-color: #50e4ff;
+    color: #fafafa;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .top-nav {
-  background-color: #b0eeff;
-  color: #fafafa;
-  padding-top: 10px;
-  padding-bottom: 10px;
+    background-color: #b0eeff;
+    color: #fafafa;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .item-list {
-  padding-bottom: 80px;
+    padding-bottom: 80px;
 }
 
 .item {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-color: #b0eeff;
-  border-width: 3px;
-  border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: #b0eeff;
+    border-width: 3px;
+    border-style: solid;
 }
 
 .item.selected {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-color: #b0eeff;
-  color: #fafafa;
-  background-color: #b0eeff;
-  border-width: 3px;
-  border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-color: #b0eeff;
+    color: #fafafa;
+    background-color: #b0eeff;
+    border-width: 3px;
+    border-style: solid;
 }
 
 .item-pic {
-  max-height: 100px;
+    max-height: 100px;
 }
 
 .item-meta-text {
-  background-color: #50e4ff;
-  color: #fafafa;
+    background-color: #50e4ff;
+    color: #fafafa;
 }
 
 #camera-icon {
-  color: #50e4ff;
-  font-size: 60px;
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  margin-left: -30px;
+    color: #50e4ff;
+    font-size: 60px;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -30px;
 }
 
 #camera-icon:active {
-  color: #00cdff;
+    color: #00cdff;
 }
 
 .scan-pic {
-  margin-top: 52px;
-  max-width: 100%;
+    margin-top: 52px;
+    max-width: 100%;
 }
 
-.loading-mask{
-  padding: 0 0 0 0;
-  height: 615px;
-  width: 100%;
-  position: absolute;
-  opacity: 80%;
-  top: 52px;
-  left: 0;
-  background-color: azure;
+.loading-mask {
+    padding: 0 0 0 0;
+    height: 615px;
+    width: 100%;
+    position: absolute;
+    opacity: 80%;
+    top: 52px;
+    left: 0;
+    background-color: azure;
 }
 
 .loading-mask > .spinner-border {
-  font-size: 20px;
-  color: #00B7FF;
-  position: absolute;
-  top: 50%;
-  margin-top: -30px;
-  left: 50%;
-  margin-left: -18px;
+    font-size: 20px;
+    color: #00B7FF;
+    position: absolute;
+    top: 50%;
+    margin-top: -30px;
+    left: 50%;
+    margin-left: -18px;
 }
 
 .single-item-pic {
-  padding: 20px 0 20px 0;
-  background-color: #b0eeff;
+    padding: 20px 0 20px 0;
+    background-color: #b0eeff;
 }
 
 .single-item-desc-row {
-  background-color: #fafafa;
-  color: #00cdff;
-  padding-top: 6px;
-  padding-bottom: 1px;
-  margin-top: 6px;
+    background-color: #fafafa;
+    color: #00cdff;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    margin-top: 6px;
 }
 
 .single-item-desc-row-label {
-  background-color: #00cdff;
-  color: #fafafa;
+    background-color: #00cdff;
+    color: #fafafa;
 }
 
 .single-item-request-btn {
-  background-color: #00cdff;
-  color: #fafafa;
+    background-color: #00cdff;
+    color: #fafafa;
 }
 
 .single-item-request-btn:active {
-  background-color: #fafafa;
-  color: #00cdff;
+    background-color: #fafafa;
+    color: #00cdff;
 }
 
 .single-item-request-btn:Visited {
-  background-color: #b0eeff;
-  color: #fafafa;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+    background-color: #b0eeff;
+    color: #fafafa;
 }
