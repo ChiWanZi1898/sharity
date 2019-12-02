@@ -7,8 +7,7 @@ $(function () {
       clicked = true;
     $(".loading-mask").attr("hidden", false);
     setTimeout(
-      function()
-      {
+      function () {
         $(location).attr("href", "/confirm")
       }, 500);
   });
