@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  .container-fluid.brand
+    h3 Sharity
+  .container-fluid.sticky-top.top-nav
+    h5 Account Profile
+
+  .container-fluid.py-2
+    .row.justify-content-center.single-item-pic
+      img(src='/images/user.jpg', width='200px')
+    .row.single-item-desc-row
+      .col-4.text-left
+        p.single-item-desc-row-label Name:
+      .col.pl-0 #{users.name}
+    .row.single-item-desc-row
+      .col-4.text-left
+        p.single-item-desc-row-label Occupation:
+      .col.pl-0 #{users.occupation}
+    .row.single-item-desc-row
+      .col-4.text-left
+        p.single-item-desc-row-label Email:
+      .col.pl-0 #{users.email}
+    .row.single-item-desc-row
+      .col-4.text-left
+        p.single-item-desc-row-label Description:
+      .col.pl-0 #{users.description}
+
+  .container-fluid.fixed-bottom.bottom-nav
+    .row
+      .col(id="home-btn")
+        .row.justify-content-center
+          i.material-icons home
+        .row.justify-content-center Home
+      .col(id="post-btn")
+        .row.justify-content-center
+          i.material-icons add
+        .row.justify-content-center Post
+      .col(id="account-btn")
+        .row.justify-content-center
+          i.material-icons face
+        .row.justify-content-center Account
+
+  script(type='text/javascript').
+    const data = !{JSON.stringify(data)}
+
+  script
+    include ../public/javascripts/common.js
+    include ../public/javascripts/account.js
