@@ -4,25 +4,25 @@ body {
 }
 
 a {
-    color: #00B7FF;
+    color: #01b7ff;
 }
 
 .bottom-nav {
-    background-color: #50e4ff;
+    background-color: #01b7ff;
     color: #fafafa;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .brand {
-    background-color: #50e4ff;
+    background-color: #01b7ff;
     color: #fafafa;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
 .top-nav {
-    background-color: #b0eeff;
+    background-color: #00cdff;
     color: #fafafa;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -35,7 +35,7 @@ a {
 .item {
     padding-top: 10px;
     padding-bottom: 10px;
-    border-color: #b0eeff;
+    border-color: #00cdff;
     border-width: 3px;
     border-style: solid;
 }
@@ -43,9 +43,9 @@ a {
 .item.selected {
     padding-top: 10px;
     padding-bottom: 10px;
-    border-color: #b0eeff;
+    border-color: #00cdff;
     color: #fafafa;
-    background-color: #b0eeff;
+    background-color: #00cdff;
     border-width: 3px;
     border-style: solid;
 }
@@ -55,12 +55,12 @@ a {
 }
 
 .item-meta-text {
-    background-color: #50e4ff;
+    background-color: #00cdff;
     color: #fafafa;
 }
 
 #camera-icon {
-    color: #50e4ff;
+    color: #00cdff;
     font-size: 60px;
     position: absolute;
     bottom: 40px;
@@ -69,7 +69,7 @@ a {
 }
 
 #camera-icon:active {
-    color: #00cdff;
+    color: #01b7ff;
 }
 
 .scan-pic {
@@ -90,7 +90,7 @@ a {
 
 .loading-mask > .spinner-border {
     font-size: 20px;
-    color: #00B7FF;
+    color: #007aff;
     position: absolute;
     top: 50%;
     margin-top: -30px;
@@ -100,7 +100,7 @@ a {
 
 .single-item-pic {
     padding: 20px 0 20px 0;
-    background-color: #b0eeff;
+    background-color: #01b7ff;
 }
 
 .single-item-desc-row {
@@ -112,12 +112,12 @@ a {
 }
 
 .single-item-desc-row-label {
-    background-color: #00cdff;
+    background-color: #01b7ff;
     color: #fafafa;
 }
 
 .single-item-request-btn {
-    background-color: #00cdff;
+    background-color: #01b7ff;
     color: #fafafa;
 }
 
@@ -128,16 +128,16 @@ a {
 
 .single-item-request-btn:link {
     background-color: #fafafa;
-    color: #00cdff;
+    color: #01b7ff;
 }
 
 .single-item-request-btn:visited {
-    background-color: #b0eeff;
+    background-color: #01b7ff;
     color: #fafafa;
 }
 
 .single-item-request-btn:hover {
-    background-color: #b0eeff;
+    background-color: #01b7ff;
     color: #fafafa;
 }
 
