@@ -17,6 +17,10 @@ block content
       .col.pl-0 #{data.name}
     .row.single-item-desc-row
       .col-4.text-right
+        p.single-item-desc-row-label From:
+      .col.pl-0 #{data.from}
+    .row.single-item-desc-row
+      .col-4.text-right
         p.single-item-desc-row-label type:
       .col.pl-0 #{data.type}
     .row.single-item-desc-row
@@ -34,7 +38,7 @@ block content
             if (!data.requested)
               button.btn.single-item-request-btn.btn-block(id="request-btn" itemid=`${data.id}`) Request
             else
-              button.btn.single-item-request-btn.btn-block(disabled id="request-btn" itemid=`${data.id}`) Request
+              button.btn.single-item-request-btn.btn-block(disabled id="request-btn" itemid=`${data.id}`) Requested
       else
         .row.single-item-desc-row
           .col-4.text-right
