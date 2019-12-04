@@ -1,7 +1,6 @@
 class DB {
   constructor() {
     this.currentUser = "Ion";
-    this.currentUser = "Ion";
     this.users = [
       {
         name: "Ion",
