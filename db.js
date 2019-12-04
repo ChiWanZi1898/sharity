@@ -239,7 +239,7 @@ class DB {
         requested_by: [],
         confirmed: false,
         post_date: "Dec 1, 2019",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        description: "Olive color backpack, suitable for college kids."
       },
       {
         id: "21",
@@ -251,7 +251,7 @@ class DB {
         requested_by: [],
         confirmed: false,
         post_date: "Dec 1, 2019",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        description: "Michael Kors black hand bag."
       },
       {
         id: "22",
@@ -263,7 +263,7 @@ class DB {
         requested_by: [],
         confirmed: false,
         post_date: "Dec 1, 2019",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        description: "A white pen."
       },
       {
         id: "23",
@@ -275,7 +275,7 @@ class DB {
         requested_by: [],
         confirmed: false,
         post_date: "Dec 1, 2019",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas integer eget aliquet nibh."
+        description: "A black DJI quadcopter drone."
       }
     ];
     this.temp = [];
